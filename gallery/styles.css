@@ -1,0 +1,253 @@
+@import url('https://fonts.cdnfonts.com/css/nats');
+@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            overflow-x: hidden;
+        }
+
+            
+        .header {
+            font-family: "NATS";
+            top: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: white;
+            padding: 1rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            z-index: 10;
+        }
+
+
+        .logo {
+            font-weight: bold;
+
+        }
+
+        .logo img {
+          margin-top: 6px;           
+         }
+
+        .nav-links {
+            display: flex;
+            gap: 1rem;
+            
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: black;
+            transition: all 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: hotpink;
+            transform: scale(1.1);
+        }
+
+h2 {
+    padding-top: 100px;
+    padding-bottom: 50px;
+    font-family: "Montserrat";
+    padding-left: 20px;
+    
+    font-weight: 800;
+     font-size: 2.5em; 
+  color: white;
+  text-shadow:
+     -1px -8px 0 black,
+      8px -8px 0 black,
+      -8px 7px 0 black,
+      8px 4px 0 black,
+      0.1px -8px 0 black,
+      0.1px 6px 0 black,
+      -8px 0.1px 0 black,
+      8px 0.1px 0 black;   /* Right - increased offset */
+      
+}
+
+.content-section {
+         text-align: left;
+            opacity: calc(var(--progress)*1.2);
+        }
+
+.content-section p {
+    text-align: left;
+    padding-top: 30vw;        
+    line-height: 100%;
+    font-size: 110%;
+    padding: 20%;
+            z-index: 2;
+            font-family: "NATS";
+        }
+
+
+.title {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        margin-top: -30%;
+        padding-bottom: 261px; 
+        margin-bottom: 250px;
+}
+
+          .title img {
+              width: 70vw;
+          }
+ 
+
+
+
+.hero-image {
+            width: 100%;
+            height: 60vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .section-links {
+            display: flex;
+            justify-content: space-around;
+            padding: 2rem 0;
+        }
+
+        .section-links a {
+            text-decoration: none;
+            color: black;
+            font-family: "Major Mono Display";
+            font-weight: bold;
+            padding: 0.5rem 1rem;
+            transition: all 0.3s ease;
+            
+      
+        }
+
+        .section-links a:hover {
+            background-color: black;
+            color: white;
+        }
+
+        .content-section {
+            padding: 2rem;
+            text-align: center;
+        }
+
+      .gallery-section {
+    padding: 2rem;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns */
+    gap: 1rem;
+}
+
+.gallery-item {
+    background-color: yellow;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column: span 2; /* Default span: each item spans 2 columns */
+}
+
+.gallery-item img {
+    width: 100%; /* Ensure the image takes up the full width of the container */
+    height: 100%; /* Ensure the image takes up the full height of the container */
+    object-fit: cover; /* Make sure the image covers the entire box without distortion */
+    object-position: center; /* Optional: Centers the image */
+}
+/* Items with the class 'span-1' will span only 1 column */
+.gallery-item.span-1 {
+    grid-column: span 1; /* This will make the item span only 1 column */
+}
+
+.gallery-item.span-2 {
+    grid-column: span 2; /* This will make the item span only 1 column */
+}
+
+.gallery-item.span-3 {
+    grid-column: span 3; /* This will make the item span only 1 column */
+}
+
+.gallery-item.span-4 {
+    grid-column: span 4; /* This will make the item span only 1 column */
+}
+
+/* For mobile screens (max-width: 768px), adjust to single column */
+@media (max-width: 768px) {
+    .gallery-grid {
+        grid-template-columns: 1fr; /* 1 column on smaller screens */
+    }
+
+    .section-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .section-links a {
+        margin: 0.5rem 0;
+        width: 80%;
+        text-align: center;
+    }
+}
+
+/* Specific section styles for various types of galleries */
+#glass .gallery-grid,
+#wire .gallery-grid,
+#stone .gallery-grid,
+#tile .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+
+
+
+
+
+
+
+img {
+    transition: filter 0.7s ease-in-out;
+}
+
+img:hover {
+    filter: invert(1);
+}
+
+.footer {
+    padding-top: 28px;
+    position: relative;
+    display: block;
+    font-family: "Montserrat";
+    padding-bottom: 175px;
+    
+    
+}
+
+
+.footer h4 {
+    margin-left: 10px;
+    font-size: 14pt;
+}
+
+.footer p {
+    width: 30%;
+    text-align: left;
+    font-size: 10pt;
+    color: lightslategray;
+    margin-left: 10px;
+    position: absolute;
+    line-height: .9rem; 
+    font-family: "NATS";
+}
